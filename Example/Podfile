@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SCTableKit_Example' do
+  pod 'SCTableKit', :path => '../'
+
+  target 'SCTableKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
