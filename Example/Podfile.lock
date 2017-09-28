@@ -1,0 +1,16 @@
+PODS:
+  - SCTableKit (0.1.0)
+
+DEPENDENCIES:
+  - SCTableKit (from `../`)
+
+EXTERNAL SOURCES:
+  SCTableKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SCTableKit: 336df1506fdeb14be9c9c577e38b4abb01a95776
+
+PODFILE CHECKSUM: 3fa29c304461c302baf6890231fe3b96b9ac6e60
+
+COCOAPODS: 1.3.1
