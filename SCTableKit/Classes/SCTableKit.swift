@@ -11,11 +11,11 @@ import UIKit
 
 public class SCTableKit: NSObject {
     
-    var sections : [SCTableSection] = []
-    var tableView: UITableView!
+    public var sections : [SCTableSection] = []
+    public var tableView: UITableView!
     fileprivate var cellRegisterer: TableCellRegisterer?
     
-    init(tableView: UITableView) {
+    public init(tableView: UITableView) {
         super.init()
         self.cellRegisterer = TableCellRegisterer(tableView: tableView)
         self.tableView = tableView
@@ -23,7 +23,7 @@ public class SCTableKit: NSObject {
         tableView.dataSource = self
     }
     
-    func reload() {
+    public func reload() {
         tableView?.reloadData()
     }
     

@@ -9,25 +9,25 @@
 import Foundation
 import UIKit
 
-class SCTableSection {
+public class SCTableSection {
 
     private(set) var rows = [Row]()
     
-    var headerTitle: String?
-    var footerTitle: String?
-    var indexTitle: String?
+    public var headerTitle: String?
+    public var footerTitle: String?
+    public var indexTitle: String?
     
-    var headerView: UIView?
-    var footerView: UIView?
+    public var headerView: UIView?
+    public var footerView: UIView?
     
-    var headerHeight: CGFloat? = nil
-    var footerHeight: CGFloat? = nil
+    public var headerHeight: CGFloat? = nil
+    public var footerHeight: CGFloat? = nil
     
-    open var numberOfRows: Int {
+    public var numberOfRows: Int {
         return rows.count
     }
     
-    open var isEmpty: Bool {
+    public var isEmpty: Bool {
         return rows.isEmpty
     }
     
@@ -40,35 +40,35 @@ class SCTableSection {
     
     // MARK: - Public -
     
-    func clear() {
+    public func clear() {
         rows.removeAll()
     }
     
-    func append(row: Row) {
+    public func append(row: Row) {
         append(rows: [row])
     }
     
-    func append(rows: [Row]) {
+    public func append(rows: [Row]) {
         self.rows.append(contentsOf: rows)
     }
     
-    func insert(row: Row, at index: Int) {
+    public func insert(row: Row, at index: Int) {
         rows.insert(row, at: index)
     }
     
-    func insert(rows: [Row], at index: Int) {
+    public func insert(rows: [Row], at index: Int) {
         self.rows.insert(contentsOf: rows, at: index)
     }
     
-    func replace(rowAt index: Int, with row: Row) {
+    public func replace(rowAt index: Int, with row: Row) {
         rows[index] = row
     }
     
-    func delete(rowAt index: Int) {
+    public func delete(rowAt index: Int) {
         rows.remove(at: index)
     }
     
-    func remove(rowAt index: Int) {
+    public func remove(rowAt index: Int) {
         rows.remove(at: index)
     }
     
