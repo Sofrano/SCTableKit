@@ -64,6 +64,8 @@ extension SCTableKit: UITableViewDataSource {
             let backgroundView = UIView()
             backgroundView.backgroundColor = selectedColor
             cell.selectedBackgroundView = backgroundView
+        }else {
+            cell.selectionStyle = .none
         }
         
         return cell
