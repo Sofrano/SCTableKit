@@ -98,7 +98,8 @@ extension SCTableKit: UITableViewDataSource {
 extension SCTableKit: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Select IndexPath: \(indexPath.row)")
+        let row = sections[indexPath.section].rows[indexPath.row]
+        row.onClick()
     }
     
 }

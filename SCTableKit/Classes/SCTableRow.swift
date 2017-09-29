@@ -30,6 +30,7 @@ public protocol Row: RowConfigurable, RowHashable {
     var estimatedHeight: CGFloat? { get }
     var defaultHeight: CGFloat? { get }
     
+    func onClick()
 }
 
 
@@ -57,11 +58,17 @@ open class TableRow<CellType: ConfigurableCell>: Row where CellType: UITableView
         return CellType.self
     }
     
+    open var rowClick: () -> Void = {}
+    
     public init(item: CellType.T) {
         self.item = item
     }
     
     // MARK: - RowConfigurable -
+    
+    open func onClick() {
+        rowClick()
+    }
     
     open func configure(_ cell: UITableViewCell) {
         (cell as? CellType)?.configure(with: item)
