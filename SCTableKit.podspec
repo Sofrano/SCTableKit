@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 s.name                  = 'SCTableKit'
 s.module_name           = 'SCTableKit'
 
-s.version               = '0.0.4'
+s.version               = '0.0.5'
 
 s.homepage              = 'https://github.com/sofrano/SCTableKit'
 s.summary               = 'Type-safe declarative table views with Swift.'
