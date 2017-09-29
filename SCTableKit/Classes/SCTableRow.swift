@@ -30,6 +30,8 @@ public protocol Row: RowConfigurable, RowHashable {
     var estimatedHeight: CGFloat? { get }
     var defaultHeight: CGFloat? { get }
     
+    var selectedBackgroundColor: UIColor? { get }
+    
     func onClick()
 }
 
@@ -52,6 +54,10 @@ open class TableRow<CellType: ConfigurableCell>: Row where CellType: UITableView
     
     open var defaultHeight: CGFloat? {
         return CellType.defaultHeight
+    }
+    
+    open var selectedBackgroundColor: UIColor? {
+        return CellType.selectedBackgroundColor
     }
     
     open var cellType: AnyClass {

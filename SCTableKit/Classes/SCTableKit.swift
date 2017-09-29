@@ -59,6 +59,13 @@ extension SCTableKit: UITableViewDataSource {
         cellRegisterer?.register(cellType: row.cellType, forCellReuseIdentifier: row.reuseIdentifier)
         let cell = tableView.dequeueReusableCell(withIdentifier: row.reuseIdentifier, for: indexPath)
         row.configure(cell)
+        
+        if let selectedColor = row.selectedBackgroundColor {
+            let backgroundView = UIView()
+            backgroundView.backgroundColor = selectedColor
+            cell.selectedBackgroundView = backgroundView
+        }
+        
         return cell
     }
     

@@ -17,6 +17,8 @@ public protocol ConfigurableCell {
     static var estimatedHeight: CGFloat? { get }
     static var defaultHeight: CGFloat? { get }
     
+    static var selectedBackgroundColor: UIColor? { get }
+    
     func configure(with _: T)
 }
 
@@ -33,5 +35,10 @@ public extension ConfigurableCell where Self: UITableViewCell {
     static var defaultHeight: CGFloat? {
         return nil
     }
+    
+    static var selectedBackgroundColor: UIColor? {
+        return nil
+    }
+
 }
 
